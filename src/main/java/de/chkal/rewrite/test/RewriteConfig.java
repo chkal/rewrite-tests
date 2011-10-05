@@ -1,9 +1,8 @@
 package de.chkal.rewrite.test;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
 import javax.servlet.ServletContext;
 
+import com.ocpsoft.rewrite.cdi.qualifier.RewriteComponent;
 import com.ocpsoft.rewrite.config.Configuration;
 import com.ocpsoft.rewrite.config.ConfigurationBuilder;
 import com.ocpsoft.rewrite.config.Direction;
@@ -11,8 +10,7 @@ import com.ocpsoft.rewrite.servlet.config.HttpConfigurationProvider;
 import com.ocpsoft.rewrite.servlet.config.Path;
 import com.ocpsoft.rewrite.servlet.config.Redirect;
 
-@Named
-@ApplicationScoped
+@RewriteComponent
 public class RewriteConfig extends HttpConfigurationProvider
 {
 
